@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  device: MyString
+  coffee_brand: MyString
+  coffee_name: MyString
+  coffee_amount: 1
+  coffee_grind: MyString
+  total_water: 1
+  total_time: 1
+  water_temp: 1
+  notes: MyText
+  user: one
+
+two:
+  device: MyString
+  coffee_brand: MyString
+  coffee_name: MyString
+  coffee_amount: 1
+  coffee_grind: MyString
+  total_water: 1
+  total_time: 1
+  water_temp: 1
+  notes: MyText
+  user: two
