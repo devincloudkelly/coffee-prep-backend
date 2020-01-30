@@ -7,7 +7,6 @@ class Api::V1::UsersController < ApplicationController
     end
 
     def create
-        # byebug
         user = User.create(user_params)
         if user.valid?
             @token = encode_token(current_user_id: user.id)
@@ -15,7 +14,6 @@ class Api::V1::UsersController < ApplicationController
         else
             render json: {error: 'failed to create user'}, status: :not_acceptable
         end
-        # render json: user 
     end
 
     def update

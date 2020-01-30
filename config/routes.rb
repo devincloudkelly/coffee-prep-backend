@@ -5,7 +5,8 @@ Rails.application.routes.draw do
       resources :preparations
       # get '/preparations/:id' to: 'preparations#show'
       resources :users
-      get '/profile' to: 'users#profile'
+      post '/login', to: 'auth#create'
+      get '/profile', to: 'users#profile'
     end
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
