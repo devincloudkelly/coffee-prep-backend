@@ -1,7 +1,7 @@
 class Api::V1::UsersController < ApplicationController
     skip_before_action :authorized, only: [:create]
 
-    def show
+    def profile
         user = User.find_by(id: params[:id])
         render json: user, status: :accepted
     end
