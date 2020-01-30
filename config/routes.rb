@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :steps
       resources :preparations
+      # get '/preparations/:id' to: 'preparations#show'
       resources :users
       get '/profile' to: 'users#profile'
     end
