@@ -7,7 +7,7 @@ class Api::V1::AuthController < ApplicationController
     if user && user.authenticate(user_login_params[:password])
         # encode token comes from ApplicationController
         token = encode_token({ current_user_id: user.id })
-        render json: { user: user, jwt: token }, status: :accepted
+        render json: { user: user, jwt: token, userPreps: user.preparations }, status: :accepted
     else
         render json: { message: 'Invalid username or password' }, status: :unauthorized
     end
