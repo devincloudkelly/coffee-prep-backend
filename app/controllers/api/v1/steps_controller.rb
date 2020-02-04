@@ -12,6 +12,7 @@ class Api::V1::StepsController < ApplicationController
     end
 
     def create
+        puts 'am I getting here?'
         step = Step.create(step_params)
         render json: step 
     end
