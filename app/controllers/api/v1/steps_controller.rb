@@ -33,7 +33,7 @@ class Api::V1::StepsController < ApplicationController
     private
 
     def step_params
-        params(:step).permit(:id, :action, :duration, :amount, :order, :directions, :preparation_id)
+        params.require(:step).permit(:id, :action, :duration, :amount, :order, :directions, :preparation_id)
     end
 
 end
