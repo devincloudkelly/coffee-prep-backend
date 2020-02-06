@@ -7,17 +7,6 @@ class Api::V1::AuthController < ApplicationController
     user = User.find_by(email_address: user_login_params[:email_address])
     #User#authenticate comes from BCrypt
     if user && user.authenticate(user_login_params[:password])
-      # user_object = {
-        #   id: user.id
-        #   name: user.name,
-        #   email_address: user.email_address,
-        #   has_aeropress: user.has_aeropress,
-        #   has_chemex: user.has_chemex,
-        #   has_pourover: user.has_pourover,
-        #   userPreps: []
-        # }prep = {
-          #   steps: []
-          # }
       userPreps = []
       preps = user.preparations
       preps.map do |prep|
