@@ -7,13 +7,10 @@ class Api::V1::AuthController < ApplicationController
     user = User.find_by(email_address: user_login_params[:email_address])
     #User#authenticate comes from BCrypt
     if user && user.authenticate(user_login_params[:password])
-      userPreps = []
       preps = user.preparations
-      preps.map do |prep|
-        steps = []
+      userPreps = preps.map do |prep|
         steps = prep.steps
         newprep = {prep: prep, steps: steps}
-        userPreps.push(newprep)
       end
         # encode token comes from ApplicationController
         token = encode_token({ current_user_id: user.id })
