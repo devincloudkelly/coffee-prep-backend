@@ -3,6 +3,7 @@ class Api::V1::UsersController < ApplicationController
 
     def profile
         user = User.find_by(id: params[:id])
+        user.preps = User.preparations
         render json: user, status: :accepted
     end
 

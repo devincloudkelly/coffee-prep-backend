@@ -3,9 +3,14 @@ class UserSerializer < ActiveModel::Serializer
   attributes :id, :name, :email_address, :password, :has_aeropress, :has_chemex, :has_pourover
   has_many :preparations
 
-  def show
-    @user = User.find(params[:id])
-    render json: @user, include: ['preparations', 'preparations.step']
-  end
+  # def initialize(user)
+  #   @user = user
+  # end
+
+  # def deeply_nest
+  #   @user.to_json(:include => {
+  #     :preparation => {:only => [:id]}
+  #   })
+  # end
   
 end
