@@ -6,8 +6,8 @@ class Api::V1::PreparationsController < ApplicationController
     end
 
     def show
-        preparation = Preparation.find(params[:id])
-        render json: preparation
+        @preparation = Preparation.find(params[:id])
+        render json: @preparation
     end
 
     def create
