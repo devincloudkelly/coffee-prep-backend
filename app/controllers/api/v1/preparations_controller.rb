@@ -7,6 +7,10 @@ class Api::V1::PreparationsController < ApplicationController
 
     def show
         @preparation = Preparation.find(params[:id])
+        totalTime = 0
+        @preparation.steps.map {|step| totalTime += step.duration}
+        @preparation.total_time = totalTime
+        # byebug
         render json: @preparation
     end
 
