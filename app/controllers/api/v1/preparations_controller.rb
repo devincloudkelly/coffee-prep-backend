@@ -7,10 +7,15 @@ class Api::V1::PreparationsController < ApplicationController
 
     def show
         @preparation = Preparation.find(params[:id])
+        totalWater = 0
         totalTime = 0
-        @preparation.steps.map {|step| totalTime += step.duration}
+        @preparation.steps.map {|step| 
+        totalTime += step.duration
+        totalWater += step.amount
+    }
         @preparation.total_time = totalTime
-        # byebug
+        @preparation.total_water = totalWater
+        byebug
         render json: @preparation
     end
 
