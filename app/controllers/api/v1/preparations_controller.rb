@@ -15,7 +15,7 @@ class Api::V1::PreparationsController < ApplicationController
     }
         @preparation.total_time = totalTime
         @preparation.total_water = totalWater
-        byebug
+        # byebug
         render json: @preparation
     end
 
