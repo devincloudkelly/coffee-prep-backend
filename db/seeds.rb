@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.create(name: 'Devin', email_address: 'dk@gmail.com', password_digest: 'pass', has_aeropress: true, has_chemex: false, has_pourover: false )
+User.create(name: 'Devin Cloud Kelly', email_address: 'devin.cloud.kelly@gmail.com', password_digest: BCrypt::Password.create('cloud'), has_aeropress: true, has_chemex: true, has_pourover: true )
 
 Preparation.create(device: 'aeropress', coffee_brand: 'Intelligentsia', coffee_name: 'Red Eye', coffee_amount: 18, coffee_grind: 'medium-fine', total_water: 200, total_time: 105, notes: 'great tasting, easy aeropress cup', user_id: 1)
 Preparation.create(device: 'aeropress', coffee_brand: 'Intelligentsia', coffee_name: 'Red Eye', coffee_amount: 20, coffee_grind: 'medium-fine', total_water: 250, total_time: 120, notes: 'okay', user_id: 1)
