@@ -14,7 +14,7 @@ Check out the [frontend repo here](https://github.com/devincloudkelly/coffee-pre
 Coffee Mentor is currently hosted on AWS for everyone to enjoy. Get started at [coffeementorapp.com](http://coffeementorapp.com).
 
 ## How It Works
-![Coffee Mentor Demo](src/images/coffee-mentor-demo.gif)
+![Coffee Mentor Demo](public/coffee-mentor-demo.gif)
 
 
 ## Why I Made This
