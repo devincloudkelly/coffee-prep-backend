@@ -1,4 +1,5 @@
 class Api::V1::PreparationsController < ApplicationController
+    skip_before_action :authorized, only: [:show]
 
     def index
         preparations = Preparation.all
